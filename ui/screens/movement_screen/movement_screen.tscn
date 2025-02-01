@@ -110,10 +110,10 @@ text = "Clima"
 layout_mode = 2
 text = "Muito frio"
 
-[node name="Label9" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+[node name="DistanceLeftLabel" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "Distância restante"
 
-[node name="Label10" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+[node name="DistanceLeftLabelValue" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
 layout_mode = 2
 text = "45km"

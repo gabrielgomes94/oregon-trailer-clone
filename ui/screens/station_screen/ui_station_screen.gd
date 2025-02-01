@@ -1,7 +1,7 @@
 extends Control
 class_name UIStationScreen
 
-@onready var option_box = $Panel/VBoxContainer
+@onready var option_box = $Panel/VBoxContainer2/VBoxContainer
 @export var option_template: PackedScene
 @export var options: Options
 

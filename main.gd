@@ -2,6 +2,10 @@ extends Node
 
 @onready var movement_screen = $MovementScreen
 @onready var station_screen = $StationScreen
+@onready var game = $Game
+
+func _ready() -> void:
+	movement_screen.distance_left = 1000
 
 
 func _input(event: InputEvent) -> void:
@@ -15,8 +19,10 @@ func _input(event: InputEvent) -> void:
 func switch_to_movement_screen():
 	station_screen.visible = false
 	movement_screen.visible = true
+	game.game_resumed.emit()
 
 
 func switch_to_station_screen():
 	station_screen.visible = true
 	movement_screen.visible = false
+	game.game_paused.emit()
