@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://fdgvhp5mbfug"]
+
+[ext_resource type="Script" path="res://ui/screens/station_screen/ui_station_screen.gd" id="1_txdjj"]
+[ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option.tscn" id="2_db4l7"]
+[ext_resource type="Script" path="res://game/options/options.gd" id="3_nswn2"]
+
+[node name="StationScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_txdjj")
+option_template = ExtResource("2_db4l7")
+options = ExtResource("3_nswn2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2

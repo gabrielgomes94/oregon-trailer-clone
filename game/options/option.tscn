@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1x0fngdkruxc"]
+
+[ext_resource type="Script" path="res://game/options/option.gd" id="1_1veae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wwma7"]
+bg_color = Color(0.167028, 0.198219, 0.485743, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h80gn"]
+bg_color = Color(0.920469, 0.336697, 0.754195, 1)
+
+[node name="Option" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+size_flags_vertical = 3
+theme_override_styles/hover = SubResource("StyleBoxFlat_wwma7")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h80gn")
+script = ExtResource("1_1veae")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_right = 948.0
+offset_bottom = 23.0
+text = "Escolha alguma coisa"

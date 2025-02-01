@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://57f8k5s7ks1t"]
+
+[ext_resource type="Theme" uid="uid://civm5eiui66g4" path="res://ui/themes/frame.tres" id="1_aj476"]
+
+[node name="Node" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_aj476")
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0564236
+anchor_top = 0.131173
+anchor_right = 0.0564236
+anchor_bottom = 0.131173
+offset_right = 60.0
+offset_bottom = 33.0
+scale = Vector2(19.3586, 6.00848)
+theme = ExtResource("1_aj476")
+theme_type_variation = &"TooltipLabel"
+theme_override_font_sizes/font_size = 12
+text = "What is your job?"
+autowrap_mode = 1
+justification_flags = 162
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,14 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://civm5eiui66g4"]
+
+[ext_resource type="FontFile" uid="uid://bg8cmmws3kaom" path="res://assets/AmiNo8bitFont/AmiNo8bitFont.ttf" id="1_gtnyi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f0oqs"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_gtnyi")
+default_font_size = 16
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_gtnyi")
+Panel/styles/panel = SubResource("StyleBoxFlat_f0oqs")

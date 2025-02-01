@@ -1,0 +1,119 @@
+[gd_scene load_steps=2 format=3 uid="uid://877c5v6ta27b"]
+
+[ext_resource type="Script" path="res://ui/screens/movement_screen/ui_movement_screen.gd" id="1_jvuky"]
+
+[node name="MovementScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jvuky")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPanel" type="Panel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="Panel/VBoxContainer/AnimationPanel"]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 138.0
+offset_right = 551.0
+offset_bottom = 178.0
+
+[node name="ColorRect3" type="ColorRect" parent="Panel/VBoxContainer/AnimationPanel"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 178.0
+offset_right = 448.0
+offset_bottom = 218.0
+
+[node name="ColorRect2" type="ColorRect" parent="Panel/VBoxContainer/AnimationPanel"]
+layout_mode = 0
+offset_left = 625.0
+offset_top = 178.0
+offset_right = 665.0
+offset_bottom = 218.0
+
+[node name="InformationPanel" type="Panel" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/InformationPanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -94.0
+offset_top = -79.0
+offset_right = 94.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label11" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer"]
+layout_mode = 2
+text = "A wild event appears!!!"
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer"]
+layout_mode = 2
+columns = 2
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Saúde"
+
+[node name="Label2" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Boa"
+
+[node name="Label3" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Ritmo"
+
+[node name="Label4" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Acelerado"
+
+[node name="Label5" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Dieta"
+
+[node name="Label6" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Farta"
+
+[node name="Label7" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Clima"
+
+[node name="Label8" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Muito frio"
+
+[node name="Label9" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Distância restante"
+
+[node name="Label10" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "45km"

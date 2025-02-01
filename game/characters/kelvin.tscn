@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvjrl4t8wfu1l"]
+
+[ext_resource type="Script" path="res://game/Character.gd" id="1_m5fky"]
+
+[node name="Character2" type="Node"]
+script = ExtResource("1_m5fky")
+name = "Kelvin"

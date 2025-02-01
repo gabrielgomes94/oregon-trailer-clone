@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://yoqv6h80s3db"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_vbgld"]
+[ext_resource type="PackedScene" uid="uid://fdgvhp5mbfug" path="res://ui/screens/station_screen/station_screen.tscn" id="2_bjh8q"]
+[ext_resource type="PackedScene" uid="uid://877c5v6ta27b" path="res://ui/screens/movement_screen/movement_screen.tscn" id="2_qlxjt"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_vbgld")
+
+[node name="MovementScreen" parent="." instance=ExtResource("2_qlxjt")]
+
+[node name="StationScreen" parent="." instance=ExtResource("2_bjh8q")]
+visible = false
+
+[node name="StartScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

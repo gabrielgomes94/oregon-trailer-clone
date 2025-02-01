@@ -1,0 +1,11 @@
+AmiNo8bitFont.ttf by Neptune Ringgs
+
+I recreated (redraw) this font from multiple NES games, pixel by pixel. So it's not me who invented it.
+
+License:
+The Sun will not swallow earth just because you used somebody's work in your projects, I'm fed up with this copyright crap.
+
+Notes:
+1- This font uppercase only, it works in any software that uses fonts (even in MS office, but it gives you a funny feeling).
+
+2- Only a few symbols are in this font file, unavailable symbols may be replaced with some default fort.
