@@ -21,3 +21,7 @@ func supplies():
 
 func map():
 	main.switch_to_map_screen()
+
+
+func pace():
+	main.switch_to_pace_screen()

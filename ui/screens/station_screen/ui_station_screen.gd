@@ -1,30 +1,13 @@
-extends Control
+extends UIScreen
 class_name UIStationScreen
-
-@onready var option_box = $Panel/VBoxContainer2/VBoxContainer
-@export var option_template: PackedScene
-@export var options: Options
-@export var actions: StationScreenActions
-
-
-func _ready() -> void:
-	var options = Options.station_screen_options_list()
-	
-	for i in options:
-		var option = option_template.instantiate() as Option
-		option.set_option_name(i, options[i]['name'])
-		option.value = i
-		option.selected.connect(on_option_selected)
-		option_box.add_child(option)	
 
 
 func on_option_selected(option: Option):
-	if option.value == 1:
-		actions.travel()
-	elif option.value == 2:
-		actions.supplies()
-	elif option.value == 3:
-		actions.map()
+	match option.value:
+		1: actions.travel()
+		2: actions.supplies()
+		3: actions.map()
+		4: actions.pace()
 
 
 func _input(event: InputEvent) -> void:
@@ -36,3 +19,7 @@ func _input(event: InputEvent) -> void:
 		actions.supplies()
 	if event.is_action_released(InputMapper.MAP_SCREEN):
 		actions.map()
+
+
+func get_options():
+	return Options.station_screen_options_list()

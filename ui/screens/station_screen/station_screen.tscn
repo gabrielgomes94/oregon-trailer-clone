@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Panel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,18 +32,18 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="PanelContainer" type="PanelContainer" parent="Panel/VBoxContainer2"]
+[node name="PanelContainer" type="PanelContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Sprite2D" type="Sprite2D" parent="Panel/VBoxContainer2/PanelContainer"]
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBoxContainer/PanelContainer"]
 position = Vector2(601, 139)
 texture = ExtResource("4_tqsde")
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer2"]
+[node name="Label" type="Label" parent="Panel/VBoxContainer"]
 layout_mode = 2
 text = "O que você vai fazer?"
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer2"]
+[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3

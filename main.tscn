@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://yoqv6h80s3db"]
+[gd_scene load_steps=9 format=3 uid="uid://yoqv6h80s3db"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vbgld"]
 [ext_resource type="PackedScene" uid="uid://fdgvhp5mbfug" path="res://ui/screens/station_screen/station_screen.tscn" id="2_bjh8q"]
@@ -7,31 +7,10 @@
 [ext_resource type="Script" path="res://game/game.gd" id="4_iwb5g"]
 [ext_resource type="PackedScene" uid="uid://cm4hy1qtybo7h" path="res://ui/screens/map_screen/map_screen.tscn" id="5_5cq7t"]
 [ext_resource type="Script" path="res://game/actions/station_screen_actions.gd" id="5_hhf8d"]
+[ext_resource type="PackedScene" uid="uid://dnmcgjsr3s20m" path="res://ui/screens/pace_screen/pace_screen.tscn" id="8_2y0dc"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_vbgld")
-
-[node name="MovementScreen" parent="." node_paths=PackedStringArray("game") instance=ExtResource("2_qlxjt")]
-game = NodePath("../Game")
-
-[node name="StationScreen" parent="." node_paths=PackedStringArray("actions") instance=ExtResource("2_bjh8q")]
-visible = false
-actions = NodePath("../Game/StationScreenActions")
-
-[node name="StartScreen" type="Control" parent="."]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SuppliesScreen" parent="." node_paths=PackedStringArray("actions") instance=ExtResource("4_i7alj")]
-visible = false
-actions = NodePath("../Game/StationScreenActions")
-
-[node name="MapScreen" parent="." node_paths=PackedStringArray("actions") instance=ExtResource("5_5cq7t")]
-visible = false
-actions = NodePath("../Game/StationScreenActions")
 
 [node name="Game" type="Node" parent="."]
 script = ExtResource("4_iwb5g")
@@ -42,3 +21,41 @@ autostart = true
 
 [node name="StationScreenActions" type="Node" parent="Game"]
 script = ExtResource("5_hhf8d")
+
+[node name="Screens" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MovementScreen" parent="Screens" node_paths=PackedStringArray("game") instance=ExtResource("2_qlxjt")]
+layout_mode = 1
+game = NodePath("../../Game")
+
+[node name="StationScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("2_bjh8q")]
+visible = false
+layout_mode = 1
+actions = NodePath("../../Game/StationScreenActions")
+
+[node name="StartScreen" type="Control" parent="Screens"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SuppliesScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("4_i7alj")]
+visible = false
+layout_mode = 1
+actions = NodePath("../../Game/StationScreenActions")
+
+[node name="MapScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("5_5cq7t")]
+visible = false
+layout_mode = 1
+actions = NodePath("../../Game/StationScreenActions")
+
+[node name="PaceScreen" parent="Screens" instance=ExtResource("8_2y0dc")]
+visible = false
+layout_mode = 1
