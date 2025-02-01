@@ -1,7 +1,7 @@
 extends Node
 class_name StationScreenActions
 
-var main
+var main: Main
 
 func _ready() -> void:
 	main = get_parent().get_parent()
@@ -17,3 +17,7 @@ func station_screen():
 
 func supplies():
 	main.switch_to_supplies_screen()
+
+
+func map():
+	main.switch_to_map_screen()

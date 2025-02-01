@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm4hy1qtybo7h"]
+
+[ext_resource type="Texture2D" uid="uid://ckq8313rby4d2" path="res://assets/metro-sp-2020.jpg" id="1_eb12q"]
+[ext_resource type="Script" path="res://ui/screens/map_screen/ui_map_screen.gd" id="1_qehbk"]
+[ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="2_pq21k"]
+[ext_resource type="Script" path="res://game/options/options.gd" id="3_n74o5"]
+
+[node name="MapScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qehbk")
+option_template = ExtResource("2_pq21k")
+options = ExtResource("3_n74o5")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SuppliesPanelContainer" type="PanelContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/VBoxContainer/SuppliesPanelContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 2
+vertical_scroll_mode = 2
+
+[node name="Container" type="Control" parent="Panel/VBoxContainer/SuppliesPanelContainer/ScrollContainer"]
+custom_minimum_size = Vector2(1200, 800)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Panel/VBoxContainer/SuppliesPanelContainer/ScrollContainer/Container"]
+position = Vector2(570, 404.5)
+scale = Vector2(0.678487, 0.513462)
+texture = ExtResource("1_eb12q")
+
+[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3

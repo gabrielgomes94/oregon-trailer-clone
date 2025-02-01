@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://877c5v6ta27b"]
+[gd_scene load_steps=3 format=3 uid="uid://877c5v6ta27b"]
 
 [ext_resource type="Script" path="res://ui/screens/movement_screen/ui_movement_screen.gd" id="1_jvuky"]
+[ext_resource type="Theme" uid="uid://civm5eiui66g4" path="res://ui/themes/frame.tres" id="2_p8001"]
 
 [node name="MovementScreen" type="Control"]
 layout_mode = 3
@@ -116,4 +117,6 @@ text = "Distância restante"
 
 [node name="DistanceLeftLabelValue" type="Label" parent="Panel/VBoxContainer/InformationPanel/VBoxContainer/GridContainer"]
 layout_mode = 2
+theme = ExtResource("2_p8001")
+theme_override_font_sizes/font_size = 25
 text = "45km"

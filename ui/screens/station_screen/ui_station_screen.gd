@@ -23,7 +23,8 @@ func on_option_selected(option: Option):
 		actions.travel()
 	elif option.value == 2:
 		actions.supplies()
-
+	elif option.value == 3:
+		actions.map()
 
 
 func _input(event: InputEvent) -> void:
@@ -33,3 +34,5 @@ func _input(event: InputEvent) -> void:
 		actions.travel()
 	if event.is_action_released(InputMapper.SUPPLIES_SCREEN):
 		actions.supplies()
+	if event.is_action_released(InputMapper.MAP_SCREEN):
+		actions.map()

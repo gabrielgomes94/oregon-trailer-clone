@@ -4,6 +4,7 @@ class_name Main
 @onready var movement_screen: UIMovementScreen = $MovementScreen
 @onready var station_screen: UIStationScreen = $StationScreen
 @onready var supplies_screen: UISuppliesScreen = $SuppliesScreen
+@onready var map_screen: UIMapScreen = $MapScreen
 
 @onready var game = $Game
 
@@ -23,6 +24,7 @@ func switch_to_movement_screen():
 	station_screen.visible = false
 	movement_screen.visible = true
 	supplies_screen.visible = false
+	map_screen.visible = false
 	game.game_resumed.emit()
 
 
@@ -30,10 +32,19 @@ func switch_to_station_screen():
 	station_screen.visible = true
 	movement_screen.visible = false
 	supplies_screen.visible = false
+	map_screen.visible = false
 	game.game_paused.emit()
 
 
 func switch_to_supplies_screen():
 	supplies_screen.visible = true
+	station_screen.visible = false
+	movement_screen.visible = false
+	map_screen.visible = false
+
+
+func switch_to_map_screen():
+	map_screen.visible = true
+	supplies_screen.visible = false
 	station_screen.visible = false
 	movement_screen.visible = false
