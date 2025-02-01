@@ -4,7 +4,7 @@ class_name Option
 @onready var label: Label = $Label
 
 var option_name: String
-var value: int
+var value
 
 signal selected
 
@@ -17,8 +17,13 @@ func on_button_pressed():
 	selected.emit(self)
 
 
-func set_option_name(action_number: int, name: String):
+func set_option_name(action_number, name: String):
 	option_name = "{action}: {name}".format({
 		"action": action_number,
 		"name": name
 	})
+
+
+func set_data(action_number, name: String):
+	value = action_number
+	set_option_name(action_number, name)

@@ -59,3 +59,16 @@ static func station_screen_options_list():
 			'name': 'Falar com as pessoas'
 		},
 	}
+
+
+static func supplies_screen_options_list():
+	return {
+		'ESC': {
+			'id': 'BACK',
+			'name': 'Voltar'
+		},
+		1: {
+			'id': 'TRAVEL',
+			'name': 'Seguir viagem'
+		},
+	}

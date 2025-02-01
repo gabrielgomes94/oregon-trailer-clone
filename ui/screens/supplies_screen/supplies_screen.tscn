@@ -1,0 +1,91 @@
+[gd_scene load_steps=4 format=3 uid="uid://kwm72n7ubflo"]
+
+[ext_resource type="Script" path="res://ui/screens/supplies_screen/ui_supplies_screen.gd" id="1_xmkur"]
+[ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="2_jln3h"]
+[ext_resource type="Script" path="res://game/options/options.gd" id="3_7v12r"]
+
+[node name="SuppliesScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xmkur")
+option_template = ExtResource("2_jln3h")
+options = ExtResource("3_7v12r")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SuppliesPanelContainer" type="PanelContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer/SuppliesPanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Suplementos
+"
+
+[node name="GridContainer" type="GridContainer" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+columns = 2
+
+[node name="FoodLabel" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Comida"
+
+[node name="FoodLabelValue" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "100"
+
+[node name="AmmunitionLabel" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Munição"
+
+[node name="AmmunitionLabelValue" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "55"
+
+[node name="SpairTireLabel" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Pneu reserva"
+
+[node name="SpairTireLabelValue" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "2"
+
+[node name="TntLabel" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "Dinamite"
+
+[node name="TntLabelValue" type="Label" parent="Panel/VBoxContainer/SuppliesPanelContainer/VBoxContainer/GridContainer"]
+layout_mode = 2
+text = "3"
+
+[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
