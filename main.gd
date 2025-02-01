@@ -1,4 +1,5 @@
 extends Node
+class_name Main
 
 @onready var movement_screen = $MovementScreen
 @onready var station_screen = $StationScreen
