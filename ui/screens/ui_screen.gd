@@ -3,7 +3,7 @@ class_name UIScreen
 
 @export var option_template: PackedScene
 @export var options: Options
-@export var actions: StationScreenActions
+@export var actions: Node
 @onready var option_box = $Panel/VBoxContainer/ActionsBoxContainer
 
 func _ready() -> void:

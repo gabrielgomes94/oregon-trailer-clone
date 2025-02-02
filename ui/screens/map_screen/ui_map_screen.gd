@@ -3,10 +3,9 @@ class_name UIMapScreen
 
 
 func on_option_selected(option: Option):
-	if str(option.value) == '1':
-		actions.travel()
-	elif str(option.value) == 'ESC':
-		actions.station_screen()
+	match option.value:
+		1: actions.travel()
+		'ESC': actions.station_screen()
 
 
 func _input(event: InputEvent) -> void:

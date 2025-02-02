@@ -1,10 +1,11 @@
 extends Node
 class_name InputMapper
 
-const SWITCH_SCREEN = "SwitchScreen"
-const STATION_SCREEN = "Esc"
+const SWITCH_SCREEN: String = "SwitchScreen"
+const STATION_SCREEN: String = "Esc"
 
 # Actions
-const TRAVEL_SCREEN = "1"
-const SUPPLIES_SCREEN = "2"
-const MAP_SCREEN = "3"
+const TRAVEL_SCREEN: String = "1"
+const SUPPLIES_SCREEN: String = "2"
+const MAP_SCREEN: String = "3"
+const PACE_SCREEN: String = "4"

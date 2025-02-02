@@ -16,7 +16,7 @@ static func basic_road_screen_options_list():
 	}
 
 
-static func station_screen_options_list():
+static func station_screen_options_list() -> Dictionary:
 	return {
 		1: {
 			'id': 'TRAVEL',
@@ -61,7 +61,7 @@ static func station_screen_options_list():
 	}
 
 
-static func supplies_screen_options_list():
+static func supplies_screen_options_list() -> Dictionary:
 	return {
 		'ESC': {
 			'id': 'BACK',
@@ -70,5 +70,22 @@ static func supplies_screen_options_list():
 		1: {
 			'id': 'TRAVEL',
 			'name': 'Seguir viagem'
+		},
+	}
+
+
+static func pace_selector_screen_list() -> Dictionary:
+	return {
+		1: {
+			'id': 'PACE_100',
+			'name': 'Ritmo tranquilo'
+		},
+		2: {
+			'id': 'PACE_200',
+			'name': 'Ritmo apressado'
+		},
+		3: {
+			'id': 'PACE_300',
+			'name': 'Ritmo arriscado'
 		},
 	}

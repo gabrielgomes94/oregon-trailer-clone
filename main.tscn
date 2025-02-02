@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://yoqv6h80s3db"]
+[gd_scene load_steps=10 format=3 uid="uid://yoqv6h80s3db"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vbgld"]
 [ext_resource type="PackedScene" uid="uid://fdgvhp5mbfug" path="res://ui/screens/station_screen/station_screen.tscn" id="2_bjh8q"]
 [ext_resource type="PackedScene" uid="uid://877c5v6ta27b" path="res://ui/screens/movement_screen/movement_screen.tscn" id="2_qlxjt"]
 [ext_resource type="PackedScene" uid="uid://kwm72n7ubflo" path="res://ui/screens/supplies_screen/supplies_screen.tscn" id="4_i7alj"]
 [ext_resource type="Script" path="res://game/game.gd" id="4_iwb5g"]
+[ext_resource type="Script" path="res://game/pace/pace_selector.gd" id="4_qeesb"]
 [ext_resource type="PackedScene" uid="uid://cm4hy1qtybo7h" path="res://ui/screens/map_screen/map_screen.tscn" id="5_5cq7t"]
-[ext_resource type="Script" path="res://game/actions/station_screen_actions.gd" id="5_hhf8d"]
+[ext_resource type="Script" path="res://game/actions/actions.gd" id="5_hhf8d"]
 [ext_resource type="PackedScene" uid="uid://dnmcgjsr3s20m" path="res://ui/screens/pace_screen/pace_screen.tscn" id="8_2y0dc"]
 
 [node name="Main" type="Node"]
@@ -19,8 +20,11 @@ script = ExtResource("4_iwb5g")
 wait_time = 3.0
 autostart = true
 
-[node name="StationScreenActions" type="Node" parent="Game"]
+[node name="Actions" type="Node" parent="Game"]
 script = ExtResource("5_hhf8d")
+
+[node name="PaceSelector" type="Node" parent="Game"]
+script = ExtResource("4_qeesb")
 
 [node name="Screens" type="Control" parent="."]
 layout_mode = 3
@@ -37,7 +41,7 @@ game = NodePath("../../Game")
 [node name="StationScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("2_bjh8q")]
 visible = false
 layout_mode = 1
-actions = NodePath("../../Game/StationScreenActions")
+actions = NodePath("../../Game/Actions")
 
 [node name="StartScreen" type="Control" parent="Screens"]
 visible = false
@@ -49,13 +53,15 @@ offset_bottom = 40.0
 [node name="SuppliesScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("4_i7alj")]
 visible = false
 layout_mode = 1
-actions = NodePath("../../Game/StationScreenActions")
+actions = NodePath("../../Game/Actions")
 
 [node name="MapScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("5_5cq7t")]
 visible = false
 layout_mode = 1
-actions = NodePath("../../Game/StationScreenActions")
+actions = NodePath("../../Game/Actions")
 
-[node name="PaceScreen" parent="Screens" instance=ExtResource("8_2y0dc")]
+[node name="PaceScreen" parent="Screens" node_paths=PackedStringArray("pace_selector", "actions") instance=ExtResource("8_2y0dc")]
 visible = false
 layout_mode = 1
+pace_selector = NodePath("../../Game/PaceSelector")
+actions = NodePath("../../Game/Actions")

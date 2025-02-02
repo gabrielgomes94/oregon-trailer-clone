@@ -1,12 +1,16 @@
-extends Control
+extends UIScreen
 class_name UIPaceScreen
 
+@export var pace_selector: PaceSelector
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+func on_option_selected(option: Option):
+	match option.value:
+		1: pace_selector.set_pace(100)
+		2: pace_selector.set_pace(200)
+		3: pace_selector.set_pace(300)
+		'ESC': actions.station_screen()
+	actions.station_screen()
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func get_options() -> Dictionary:
+	return Options.pace_selector_screen_list()

@@ -1,7 +1,6 @@
 extends UIScreen
 class_name UIStationScreen
 
-
 func on_option_selected(option: Option):
 	match option.value:
 		1: actions.travel()
@@ -19,6 +18,8 @@ func _input(event: InputEvent) -> void:
 		actions.supplies()
 	if event.is_action_released(InputMapper.MAP_SCREEN):
 		actions.map()
+	if event.is_action_released(InputMapper.PACE_SCREEN):
+		actions.pace()
 
 
 func get_options():

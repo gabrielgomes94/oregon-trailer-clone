@@ -6,8 +6,8 @@ signal game_paused
 signal game_resumed
 
 var distance_left = 1000
-var pace = 100
 
+@onready var pace: PaceSelector = $PaceSelector
 @onready var timer = $Timer
 
 func _ready() -> void:
@@ -18,7 +18,7 @@ func _ready() -> void:
 
 
 func on_timer_timeout():
-	distance_left = distance_left - pace
+	distance_left = distance_left - pace.get_pace()
 	distance_left_changed.emit(distance_left)	
 
 
