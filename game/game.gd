@@ -2,12 +2,19 @@ extends Node
 class_name Game
 
 signal distance_left_changed
+signal food_left_changed
 signal game_paused
 signal game_resumed
 
 var distance_left = 1000
+var food_left = 1000
+
+var current_route
+var total_distance
+var time_elapsed
 
 @onready var pace: PaceSelector = $PaceSelector
+@onready var diet: DietSelector = $DietSelector
 @onready var timer = $Timer
 
 func _ready() -> void:
@@ -19,8 +26,9 @@ func _ready() -> void:
 
 func on_timer_timeout():
 	distance_left = distance_left - pace.get_pace()
-	distance_left_changed.emit(distance_left)	
-
+	distance_left_changed.emit(distance_left)
+	food_left = food_left - diet.diet
+	food_left_changed.emit(food_left)
 
 func on_game_paused():
 	timer.paused = true

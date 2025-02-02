@@ -89,3 +89,20 @@ static func pace_selector_screen_list() -> Dictionary:
 			'name': 'Ritmo arriscado'
 		},
 	}
+
+
+static func diet_selector_screen_list() -> Dictionary:
+	return {
+		1: {
+			'id': 'DIET_100',
+			'name': 'Dieta farta'
+		},
+		2: {
+			'id': 'DIET_50',
+			'name': 'Dieta reduzida'
+		},
+		3: {
+			'id': 'DIET_20',
+			'name': 'Dieta mínima'
+		},
+	}
