@@ -8,24 +8,24 @@ func _ready() -> void:
 
 
 func travel():
-	main.switch_to_movement_screen()
+	main.call_deferred("switch_to_movement_screen")
 
 
 func station_screen():
-	main.switch_to_station_screen()
+	main.call_deferred("switch_to_station_screen")
 
 
 func supplies():
-	main.switch_to_supplies_screen()
+	main.call_deferred("switch_to_supplies_screen")
 
 
 func map():
-	main.switch_to_map_screen()
+	main.call_deferred("switch_to_map_screen")
 
 
 func pace():
-	main.switch_to_pace_screen()
+	main.call_deferred("switch_to_pace_screen")
 
 
 func diet():
-	main.switch_to_diet_screen()
+	main.call_deferred("switch_to_diet_screen")

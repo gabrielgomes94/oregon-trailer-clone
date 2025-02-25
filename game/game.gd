@@ -5,6 +5,8 @@ signal distance_left_changed
 signal food_left_changed
 signal game_paused
 signal game_resumed
+signal diet_changed
+signal pace_changed
 
 var distance_left = 1000
 var food_left = 1000
@@ -13,8 +15,8 @@ var current_route
 var total_distance
 var time_elapsed
 
-@onready var pace: PaceSelector = $PaceSelector
-@onready var diet: DietSelector = $DietSelector
+@onready var pace: Pace = $PaceSelector
+@onready var diet: Diet = $DietSelector
 @onready var timer = $Timer
 
 func _ready() -> void:

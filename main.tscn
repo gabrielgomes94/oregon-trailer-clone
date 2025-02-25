@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://877c5v6ta27b" path="res://ui/screens/movement_screen/movement_screen.tscn" id="2_qlxjt"]
 [ext_resource type="PackedScene" uid="uid://kwm72n7ubflo" path="res://ui/screens/supplies_screen/supplies_screen.tscn" id="4_i7alj"]
 [ext_resource type="Script" path="res://game/game.gd" id="4_iwb5g"]
-[ext_resource type="Script" path="res://game/party/pace/pace_selector.gd" id="4_qeesb"]
+[ext_resource type="Script" path="res://game/party/pace.gd" id="4_wx181"]
 [ext_resource type="PackedScene" uid="uid://cm4hy1qtybo7h" path="res://ui/screens/map_screen/map_screen.tscn" id="5_5cq7t"]
-[ext_resource type="Script" path="res://game/party/diet/diet_selector.gd" id="5_ckje5"]
+[ext_resource type="Script" path="res://game/party/diet.gd" id="5_8b36w"]
 [ext_resource type="Script" path="res://game/player/actions/actions.gd" id="5_hhf8d"]
 [ext_resource type="Script" path="res://game/party/party.gd" id="6_7lpmj"]
 [ext_resource type="PackedScene" uid="uid://dnmcgjsr3s20m" path="res://ui/screens/pace_screen/pace_screen.tscn" id="8_2y0dc"]
@@ -27,10 +27,10 @@ autostart = true
 script = ExtResource("5_hhf8d")
 
 [node name="PaceSelector" type="Node" parent="Game"]
-script = ExtResource("4_qeesb")
+script = ExtResource("4_wx181")
 
 [node name="DietSelector" type="Node" parent="Game"]
-script = ExtResource("5_ckje5")
+script = ExtResource("5_8b36w")
 
 [node name="Party" type="Node" parent="Game"]
 script = ExtResource("6_7lpmj")
@@ -69,14 +69,14 @@ visible = false
 layout_mode = 1
 actions = NodePath("../../Game/Actions")
 
-[node name="PaceScreen" parent="Screens" node_paths=PackedStringArray("pace_selector", "actions") instance=ExtResource("8_2y0dc")]
+[node name="PaceScreen" parent="Screens" node_paths=PackedStringArray("pace", "actions") instance=ExtResource("8_2y0dc")]
 visible = false
 layout_mode = 1
-pace_selector = NodePath("../../Game/PaceSelector")
+pace = NodePath("../../Game/PaceSelector")
 actions = NodePath("../../Game/Actions")
 
-[node name="DietScreen" parent="Screens" node_paths=PackedStringArray("diet_selector", "actions") instance=ExtResource("10_re10o")]
+[node name="DietScreen" parent="Screens" node_paths=PackedStringArray("diet", "actions") instance=ExtResource("10_re10o")]
 visible = false
 layout_mode = 1
-diet_selector = NodePath("../../Game/DietSelector")
+diet = NodePath("../../Game/DietSelector")
 actions = NodePath("../../Game/Actions")
