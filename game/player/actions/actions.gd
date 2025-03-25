@@ -29,3 +29,7 @@ func pace():
 
 func diet():
 	main.call_deferred("switch_to_diet_screen")
+
+
+func dialog():
+	main.call_deferred("switch_to_dialog_screen")

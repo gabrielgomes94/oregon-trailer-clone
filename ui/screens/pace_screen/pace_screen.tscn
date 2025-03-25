@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnmcgjsr3s20m"]
+[gd_scene load_steps=6 format=3 uid="uid://dnmcgjsr3s20m"]
 
 [ext_resource type="Script" path="res://ui/screens/pace_screen/ui_pace_screen.gd" id="1_ebxt0"]
 [ext_resource type="Texture2D" uid="uid://bxeohtrbk7agf" path="res://assets/icon.svg" id="2_5clw8"]
 [ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="2_jmcg4"]
 [ext_resource type="Script" path="res://game/options/options.gd" id="3_5vrd1"]
+[ext_resource type="PackedScene" uid="uid://dommrjvc0hmfa" path="res://ui/containers/action_box_container.tscn" id="5_83bhs"]
 
 [node name="PaceScreen" type="Control"]
 layout_mode = 3
@@ -40,10 +41,5 @@ size_flags_vertical = 3
 position = Vector2(601, 139)
 texture = ExtResource("2_5clw8")
 
-[node name="Label" type="Label" parent="Panel/VBoxContainer"]
+[node name="ActionsBoxContainer" parent="Panel/VBoxContainer" instance=ExtResource("5_83bhs")]
 layout_mode = 2
-text = "O que você vai fazer?"
-
-[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3

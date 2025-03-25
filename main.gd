@@ -7,13 +7,14 @@ class_name Main
 @onready var map_screen: UIMapScreen = $Screens/MapScreen
 @onready var pace_screen: UIPaceScreen = $Screens/PaceScreen
 @onready var diet_screen: UIDietScreen = $Screens/DietScreen
+@onready var dialog_screen: UIDialogChatScreen = $Screens/DialogScreen
 
 var screens: Array
 
 @onready var game = $Game
 
 func _ready() -> void:
-	screens = [movement_screen, station_screen, supplies_screen, map_screen, pace_screen, diet_screen];
+	screens = [movement_screen, station_screen, supplies_screen, map_screen, pace_screen, diet_screen, dialog_screen];
 
 
 func _input(event: InputEvent) -> void:
@@ -53,3 +54,6 @@ func switch_to_diet_screen():
 func switch_screen(target_screen):
 	for screen in screens:
 		screen.visible = screen == target_screen
+
+func switch_to_dialog_screen():
+	switch_screen(dialog_screen)

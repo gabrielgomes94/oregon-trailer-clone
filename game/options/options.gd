@@ -106,3 +106,12 @@ static func diet_selector_screen_list() -> Dictionary:
 			'name': 'Dieta mínima'
 		},
 	}
+
+
+static func dialog_selector_screen_list() -> Dictionary:
+	return {
+		'ESC': {
+			'id': 'BACK',
+			'name': 'Voltar'
+		},
+	}

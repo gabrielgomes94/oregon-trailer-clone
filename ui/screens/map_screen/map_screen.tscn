@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm4hy1qtybo7h"]
+[gd_scene load_steps=6 format=3 uid="uid://cm4hy1qtybo7h"]
 
 [ext_resource type="Texture2D" uid="uid://ckq8313rby4d2" path="res://assets/metro-sp-2020.jpg" id="1_eb12q"]
 [ext_resource type="Script" path="res://ui/screens/map_screen/ui_map_screen.gd" id="1_qehbk"]
 [ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="2_pq21k"]
 [ext_resource type="Script" path="res://game/options/options.gd" id="3_n74o5"]
+[ext_resource type="PackedScene" uid="uid://dommrjvc0hmfa" path="res://ui/containers/action_box_container.tscn" id="5_dkvvv"]
 
 [node name="MapScreen" type="Control"]
 layout_mode = 3
@@ -51,6 +52,5 @@ position = Vector2(570, 404.5)
 scale = Vector2(0.678487, 0.513462)
 texture = ExtResource("1_eb12q")
 
-[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+[node name="ActionsBoxContainer" parent="Panel/VBoxContainer" instance=ExtResource("5_dkvvv")]
 layout_mode = 2
-size_flags_vertical = 3

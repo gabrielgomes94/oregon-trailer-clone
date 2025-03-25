@@ -23,6 +23,8 @@ func _input(event: InputEvent) -> void:
 		actions.pace()
 	if event.is_action_released(InputMapper.DIET_SCREEN):
 		actions.diet()
+	if event.is_action_released(InputMapper.DIALOG_SCREEN):
+		actions.dialog()
 
 func get_options():
 	return Options.station_screen_options_list()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://kwm72n7ubflo"]
+[gd_scene load_steps=5 format=3 uid="uid://kwm72n7ubflo"]
 
 [ext_resource type="Script" path="res://ui/screens/supplies_screen/ui_supplies_screen.gd" id="1_xmkur"]
 [ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="2_jln3h"]
 [ext_resource type="Script" path="res://game/options/options.gd" id="3_7v12r"]
+[ext_resource type="PackedScene" uid="uid://dommrjvc0hmfa" path="res://ui/containers/action_box_container.tscn" id="4_lxq1n"]
 
 [node name="SuppliesScreen" type="Control"]
 layout_mode = 3
@@ -86,6 +87,5 @@ text = "Dinamite"
 layout_mode = 2
 text = "3"
 
-[node name="ActionsBoxContainer" type="VBoxContainer" parent="Panel/VBoxContainer"]
+[node name="ActionsBoxContainer" parent="Panel/VBoxContainer" instance=ExtResource("4_lxq1n")]
 layout_mode = 2
-size_flags_vertical = 3
