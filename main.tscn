@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://yoqv6h80s3db"]
+[gd_scene load_steps=16 format=3 uid="uid://yoqv6h80s3db"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_vbgld"]
 [ext_resource type="PackedScene" uid="uid://fdgvhp5mbfug" path="res://ui/screens/station_screen/station_screen.tscn" id="2_bjh8q"]
@@ -15,7 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://rcd8gogm4c3g" path="res://ui/screens/dialog_screen/dialog_screen.tscn" id="13_474tm"]
 [ext_resource type="PackedScene" uid="uid://b1x0fngdkruxc" path="res://game/options/option_template.tscn" id="13_opjh1"]
 [ext_resource type="Script" path="res://game/options/options.gd" id="14_jp6gf"]
-[ext_resource type="Script" path="res://ui/screens/dialog_screen/ui_dialog_chat_screen.gd" id="16_owomr"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_vbgld")
@@ -90,7 +89,6 @@ actions = NodePath("../../Game/Actions")
 [node name="DialogScreen" parent="Screens" node_paths=PackedStringArray("actions") instance=ExtResource("13_474tm")]
 visible = false
 layout_mode = 1
-script = ExtResource("16_owomr")
 option_template = ExtResource("13_opjh1")
 options = ExtResource("14_jp6gf")
 actions = NodePath("../../Game/Actions")

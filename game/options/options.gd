@@ -76,6 +76,10 @@ static func supplies_screen_options_list() -> Dictionary:
 
 static func pace_selector_screen_list() -> Dictionary:
 	return {
+		'ESC': {
+			'id': 'BACK',
+			'name': 'Voltar'
+		},
 		1: {
 			'id': 'PACE_100',
 			'name': 'Ritmo tranquilo'
@@ -93,6 +97,10 @@ static func pace_selector_screen_list() -> Dictionary:
 
 static func diet_selector_screen_list() -> Dictionary:
 	return {
+		'ESC': {
+			'id': 'BACK',
+			'name': 'Voltar'
+		},
 		1: {
 			'id': 'DIET_100',
 			'name': 'Dieta farta'
